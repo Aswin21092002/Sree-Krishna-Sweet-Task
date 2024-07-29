@@ -1,0 +1,14 @@
+<!-- sweets_shop/templates/complaint_status.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mt-4">
+    <h2>Complaint Status</h2>
+    <p>Shop: {{ complaint.shop.name }}</p>
+    <p>Zone: {{ complaint.shop.zone.name }}</p>
+    <p>Location: {{ complaint.shop.location }}</p>
+    <p>Description: {{ complaint.description }}</p>
+    <p>Status: {{ complaint.is_resolved|yesno:"Resolved,Pending" }}</p>
+</div>
+{% endblock %}
